@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <h1 class="meniher-ss">Menu</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <h2 class="menih" >Appetizers</h2>
+        {% for item in menu %}
+        {% if item.Category == "Appetizer" %}
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{ item.Image.url }}" class="img-fluid rounded-start" alt="{{ item.Title }}" style="height: 200px;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.Title }}</h5>
+                <p class="card-text">{{ item.Category }}</p>
+                <p class="card-text">Price: ${{ item.Price }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif%}
+      {% endfor %}
+      </div>
+      <div class="col-md-4">
+        <h2 class="menih" >Main</h2>
+        {% for item in menu %}
+        {% if item.Category == "Main" %}
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{ item.Image.url }}" class="img-fluid rounded-start" alt="{{ item.Title }}" style="height: 200px;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.Title }}</h5>
+                <p class="card-text">{{ item.Category }}</p>
+                <p class="card-text">Price: ${{ item.Price }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif%}
+      {% endfor %}
+      </div>
+      <div class="col-md-4">
+        <h2 class="menih" >Desserts</h2>
+        {% for item in menu %}
+        {% if item.Category == "Dessert" %}
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="{{ item.Image.url }}" class="img-fluid rounded-start" alt="{{ item.Title }}" style="height: 200px;">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.Title }}</h5>
+                <p class="card-text">{{ item.Category }}</p>
+                <p class="card-text">Price: ${{ item.Price }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif%}
+      {% endfor %}
+      </div>
+      
+    </div>
+{% endblock %}

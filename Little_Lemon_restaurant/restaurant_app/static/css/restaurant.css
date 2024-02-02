@@ -1,0 +1,61 @@
+.ll{
+    background-color: white;
+    text-align: center;
+    color:darkgreen;
+}
+
+.lemon_nav{
+    background-color:white;
+    color: aliceblue;
+}
+.poce{
+    text-align: center;
+}
+.aboutimg{
+    width: 250px;
+    height: 350px;
+    margin: 15px auto;
+    box-shadow: 0 0 8px;
+    overflow: hidden;
+}
+.imgr{
+    width: 350px;
+    height: 550px;
+    display: block;
+
+}
+.menih{
+    text-align: center;
+}
+.meniher-ss{
+    text-align: center;
+}
+.zad{
+    background-color: green;
+}
+.slider-slika{
+    width: 180px;
+    height: 300px;
+    margin: 15px auto;
+    box-shadow: 0 0 8px;
+    overflow: hidden;
+    text-align: center;
+}
+.slider-slika > img{
+    width: 100%;
+    height: 280px;
+    display: block;
+}
+
+.slider-slikar > img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.errorer {
+    color: red;
+}
+.dugme{
+    background-color: green;
+    color: white;
+}

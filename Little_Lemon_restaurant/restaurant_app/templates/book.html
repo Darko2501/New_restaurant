@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+   <div class="row">
+     <div class="col">
+      {% if messages %}
+      <ul>
+      {% for message in messages %}
+         <li{% if message.tags %} class="{{ message.tags }} erorer "{% endif %}>{{ message }}</li>
+      {% endfor %}
+      </ul>
+{% endif %}
+      <h1>Booking</h1>
+      <p>You can book your reservation here</p>
+
+      <form method="post" action="{% url 'book' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="dugme">BOOK NOW</button>
+      </form>
+       
+ 
+     </div>
+     <div class="col slide-slika">
+       <img  class="imgr" src="/static/Images/restaurant/r3.jpg" alt="About">
+ 
+     </div>
+   </div>
+ </div>
+
+
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<div class="container">
+    <div class="row">
+        <div class="col slider-slika">
+            <img id="sldr1-imgs" src="{% static 'Images/cousine/c1.jpg' %}" alt="cousine">
+            <a href="{% url 'about' %}">About us</a>
+        </div>
+        <div class="col slider-slika">
+            <img id="sldr2-img" src="{% static 'Images/food/f1.jpg' %}" alt="food">
+            <a href="{% url 'menu' %}">Our menu</a>
+        </div>
+        <div class="col slider-slika">
+            <img id="sldr3-im" src="{% static 'Images/restaurant/r1.jpg' %}" alt="restaurant">
+            <a href="{% url 'login' %}">Make reservations</a>
+
+        </div>
+    </div>
+    <div class="row">
+        <h1 class="ll">WELCOME TO THE LITTLE LEMON RESTAURANT</h1>
+    </div>
+    <div class="row">
+        <div class="col poce">
+            <h3 class="poce">MONDAY-FRIDAY</h3>
+            <h4 class="poce">10 h</h4>
+            <h4 class="poce">22 h</h4>
+        </div>
+        <div class="col poce">
+            <h3 class="poce">SATURDAY</h3>
+            <h4 class="poce">10 h</h4>
+            <h4 class="poce">22 h</h4>
+        </div>
+        <div class="col poce">
+            <h3 class="poce">SUNDAY</h3>
+            <h4 class="poce">10 h</h4>
+            <h4 class="poce">23 h</h4>
+        </div>
+    </div>
+</div>
+<script>
+    var img1=document.getElementById('sldr1-imgs');
+var counter1=1;
+var loop1=setInterval(function(){
+    counter1++;
+    if(counter1===5){
+        counter1=1;
+    }
+    img1.setAttribute('src','static/Images/cousine/c'+counter1+'.jpg');
+
+},20000)
+var img2=document.getElementById('sldr2-img');
+counter2=1;
+var loop2=setInterval(function(){
+    counter2++;
+    if(counter2===7){
+        counter2=1;
+    }
+    img2.setAttribute('src','static/Images/food/f'+counter2+'.jpg');
+},17000)
+var img3=document.getElementById('sldr3-im');
+counter3=1;
+var loop3=setInterval(function(){
+    counter3++;
+    if(counter3===3){
+        counter3=1;
+    }
+    img3.setAttribute('src','static/Images/restaurant/r'+counter3+'.jpg');
+},33000)
+</script>
+
+
+{% endblock %}
+

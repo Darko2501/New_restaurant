@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>Register</h1>
+      <form method="POST"> 
+        {% csrf_token %}
+        {{form.as_p}}
+        <br></br>
+        <button type="submit" class="btn btn-primary">Register</button>
+      </form>
+
+    </div>
+    <div class="col slider-slikar">
+      <img  class="imgr" src="/static/Images/restaurant/r1.jpg" alt="About">
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

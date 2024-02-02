@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>Login</h1>
+      <form method="POST"> 
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username">
+          <div id="username" class="form-text"></div>
+        </div>
+        <div class="mb-3">
+          <label for="password1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password1" name="password">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+    </div>
+    <div class="col slide-slika">
+      <img  class="imgr" src="/static/Images/restaurant/r2.jpg" alt="About">
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
